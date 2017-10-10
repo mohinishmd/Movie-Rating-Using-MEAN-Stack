@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const path = require('path');
 app.use(express.static(__dirname + '/client/dist/'));
 const config = require('./config/database');
 
