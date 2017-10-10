@@ -1,0 +1,23 @@
+{
+  "name": "movie-rating-using-mean-stack",
+  "version": "1.0.0",
+  "description": "MEAN Stack Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshitdavda/Movie-Rating-Using-MEAN-Stack.git"
+  },
+  "author": "Harshit Davda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshitdavda/Movie-Rating-Using-MEAN-Stack/issues"
+  },
+  "homepage": "https://github.com/harshitdavda/Movie-Rating-Using-MEAN-Stack#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.12.1"
+  }
+}
