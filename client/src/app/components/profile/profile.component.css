@@ -1,0 +1,11 @@
+.testimonial-card .avatar {
+    border-radius: 50%;
+    width: 120px;
+    height: auto;
+    margin: -65px auto 0;
+    border: 5px solid #fff;
+    background: #FFF;
+}
+.testimonial-card .avatar img {
+    width: 100%;
+}

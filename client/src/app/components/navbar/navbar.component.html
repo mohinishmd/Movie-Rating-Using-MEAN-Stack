@@ -1,5 +1,5 @@
 <!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -8,17 +8,17 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-      <a class="navbar-brand" href="/">Movie Rating System</a>
+      <a class="navbar-brand" routerLink="/">Movie Rating System</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dashboard">Dashboard</a></li>
-        <li><a href="/movies">Movies</a></li>
-        <li><a href="/series">TV Series</a></li>
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="#" (click)="onLogoutClick()">Logout</a></li>
-        <li><a href="/register">Register</a></li>
+        <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a *ngIf="authService.loggedIn()" routerLink="/movies">Movies</a></li>
+        <li><a *ngIf="authService.loggedIn()" routerLink="/series">Series</a></li>
+        <li><a *ngIf="authService.loggedIn()" routerLink="/profile">Profile</a></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a *ngIf="!authService.loggedIn()" routerLink="/login">Login</a></li>
+        <li><a *ngIf="authService.loggedIn()" href="#" (click)="onLogoutClick()">Logout</a></li>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/register">Register</a></li>
       </ul>
     </div>
     <!--/.nav-collapse -->
